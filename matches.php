@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>Signup</title>
+            <title>Matches</title>
             <meta charset="utf-8" />
             <link href="heart.gif" type="image/gif" rel="shortcut icon" />
             <link href="match.css" type="text/css" rel="stylesheet" />
