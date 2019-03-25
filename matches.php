@@ -7,7 +7,7 @@
             <link href="match.css" type="text/css" rel="stylesheet" />
     </head>
 	<body>
-            <form action="/matches-submit.php" method="post">
+            <form action="/matches-submit.php" method="get">
                 <fieldset>
                     <legend>Returning User:</legend>
                     <ul class="match">
