@@ -34,7 +34,7 @@
         $operatingSystem = "Linux";
     }
 
-    $append_string = $name . ',' . $gender . ',' . $age . ',' . $personality . ',' . $operatingSystem . ',' . $min . ',' . $max; 
+    $append_string = $name . ',' . $gender . ',' . $age . ',' . $personality . ',' . $operatingSystem . ',' . $min . ',' . $max . "\n"; 
     file_put_contents("singles.txt", $append_string, FILE_APPEND | LOCK_EX);
     ?>
 		<div id="bannerarea">
