@@ -58,18 +58,18 @@ else{
                         <p><img src=" . $image . "> $name1[0] $name1[1]</p>
                         <ul>
                         <li>
-                            <strong>Gender:  " . $gender . "</strong>
+                            <strong>Gender:</strong>  " . $gender . "
                         </li>
                         <li>
-                            <strong>Age: " . $age . "</strong>
+                            <strong>Age: </strong>" . $age . "
                             
                         </li>
                         <li>
-                            <strong>Personality Type: " . $personality . "</strong>
+                            <strong>Personality Type: </strong> ". $personality . "
                             
                         </li>
                         <li>
-                            <strong>OS: " . $opSystem . "</strong>
+                            <strong>OS: </strong>" . $opSystem . "
                             </li>
                         </ul>
                     </div>");
