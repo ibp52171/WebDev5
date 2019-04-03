@@ -52,4 +52,10 @@ else{
 
 ?>
 </body>
+    <ul class="match">
+        <li class="match">
+            <label>Upload a photo of yourself</label><br>
+            <input type="file" name="pic" accept="image/*">
+        </li>
+    </ul>
 </html>
