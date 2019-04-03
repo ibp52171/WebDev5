@@ -12,8 +12,14 @@
 			<img src="match.png" alt="banner logo" /> <br />
 			where meek geeks meet
 		</div>
-<?php
+        <?php
+error_reporting(0);
+$imageArray;
 $name = $_GET['name'];
+echo("<h1> Matches for " . $name . "</h1>");
+if(empty($name)) {
+    exit("Please enter a name");
+}
 $txtFile = file_get_contents("singles.txt");
 $users = explode("\n", $txtFile);
 $matching_user;
@@ -24,9 +30,8 @@ foreach($users as $user => $data){
         break;
     }
 }
-
 if($matching_user[0] != $name){
-    echo("The entered name is not registered. Please try again...");
+    exit("The entered name is not registered. Please try again...");
 }
 else{
     foreach($users as $user => $data){
@@ -38,6 +43,9 @@ else{
             $comp2 = str_split($tempArray[3]);
             for($i = 0; $i < 4; $i++){
                 if($comp1[$i] === $comp2[$i]){
+                    //for($j = 0; $j < 7; $j++)    {
+                        //echo($imageArray[$j]);
+                    //}
                     // for($j = 0; $j < 7; $j++)    {
                     //     echo($tempArray[$j]);
                     // }
@@ -52,37 +60,34 @@ else{
                         // echo("<ul class=\"match\">");
                         // echo("<img src=" . $image . ">");
                         // echo("</ul>");
-                        echo("<ul class=\"match\">
-                        <li class=\"match\">
-                        <img src=" . $image . ">
+                        echo(" <div class= \"match\">
+                        <p><img src=" . $image . "> $name1[0] $name1[1]</p>
+                        <ul>
+                        <li>
+                            <strong>Gender: </strong>
                         </li>
-                        <li class=\"match\">
-                        <?php echo(\"$name\" ?>
-                        </li>
-                        <li class=\"match\">
-                            <strong>Name:</strong>
-                        </li>
-                        <li class=\"match\">
-                            <strong>Gender:</strong>
-                        </li>
-                        <li class=\"match\">
+                        <li>
                             <strong>Age:</strong>
                             
                         </li>
-                        <li class=\"match\">
+                        <li>
                             <strong>Personality Type:</strong>
                             
                         </li>
-                        <li class=\"match\">
+                        <li>
                             <strong>OS:</strong>
                             </li>
-                        </ul>");
-                    echo("\n");
-                    break;
+                        </ul>
+                    </div>");
                 }
             }
         }
     }
 }
 ?>
+</body>
+    <ul class="match">
+
+    </ul>
+</html> 
 </html>
