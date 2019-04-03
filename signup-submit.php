@@ -7,15 +7,24 @@
             <link href="match.css" type="text/css" rel="stylesheet" />
             <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
     </head>
-	<body>
     <?php
     $name = $_POST['matchname'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
     $personality = $_POST['personality'];
+    if(!preg_match('/[IE]{1}[NS]{1}[FT]{1}[JP]{1}/', $personality)) {
+        exit("Personality invalid");
+    }
     $operatingSystem = $_POST['operating-system'];
     $min = $_POST['min'];
     $max = $_POST['max'];
+    if($min > $max) {
+        exit("Minimum age cannot exceed maximum age");
+
+    }
+    if(empty($name) or empty($age) or empty($personality) or empty($min) or empty($max)) {
+        exit("Please fill out all required fields");
+    }
 
     if($gender === "male"){
         $gender = 'M';
@@ -42,7 +51,7 @@
 			where meek geeks meet
 		</div>
             <h1>Thank you!</h1>
-            <!-- Welcome to March + name -->
+            <p>Welcome to Match, <?php echo($name)?>!</p>
             <p>Now <a href="matches.php">Login to see your matches!</a></p>
             <div>
             <p>
