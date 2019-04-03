@@ -49,6 +49,10 @@
                             <input type="text" name="max" size="6" maxlength="2" placeholder="max"/>
                         </li>
                         <li class="match">
+                            <label>Upload a photo of yourself</label><br>
+                            <input type="file" name="pic" accept="image/*">
+                        </li>
+                        <li class="match">
                             <input type="submit" value="Sign Up"/>
                         </li>
                     </ul>
